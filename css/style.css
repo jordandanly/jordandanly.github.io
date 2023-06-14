@@ -1,0 +1,109 @@
+/* My Styles */
+
+/* Vertical and Horizontal aligment of container */
+
+@import url('https://fonts.googleapis.com/css2?family=Arsenal&display=swap');
+h1, h2 {
+    font-family: 'Arsenal', sans-serif;
+    font-size: 3rem;
+    text-align: center;
+    margin-bottom: 2rem;
+    color: #130907;
+}
+a {
+    font-family: 'Arsenal', sans-serif;
+    font-size: 1.5rem;
+    text-align: center;
+    margin: 3px;
+    margin-bottom: 2rem;
+    margin-left: 10px;
+    color: #9F566E;
+}
+p {
+    font-family: 'Arsenal', sans-serif;
+    font-size: 1.5rem;
+    text-align: center;
+    margin-bottom: 2rem;
+    color: #130907;
+}
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: auto;
+    background: #F6F3EE;
+}
+
+ /* scene */
+.scene {
+    width: 300px;
+    height: 400px;
+    /* space between card-scenes */
+    margin: 16px;
+
+    /* set perspective   */
+    perspective: 600px;
+}
+
+/* card */
+.card {
+    width: 100%;
+    height: 100%;
+    position: relative;
+
+    cursor: pointer;
+    transition: transform 1s;
+
+    /* preserve child 3d   */
+    transform-style: preserve-3d;
+}
+
+/* face */
+.face {
+    position: absolute;
+    height: 200%;
+    width: 100%;
+
+    /* hide back face   */
+    backface-visibility: hidden;
+}
+
+.front {
+    background: #F6F3EE;
+}
+
+.back {
+    background: #F6F3EE;
+    /* flip it default   */
+    transform: rotateY(180deg);
+}
+
+/* flip card
+  * toggle with JS
+  */
+.flipped {
+    transform: rotateY(180deg);
+}
+/* Start of My Design */
+
+.front img {
+    width: 100%;
+
+}
+
+/* Media Query for Mobile */
+@media only screen and (max-width: 30em){ 
+    
+    /* Diagnostic Styling. Delete When Done. */
+    body:before {
+         background: yellow;
+         content: "Mobile Size";
+    }
+
+    body {
+        display: flex;
+        flex-direction: column;
+    }
+    
+}
